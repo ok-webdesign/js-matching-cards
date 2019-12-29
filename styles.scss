@@ -1,0 +1,139 @@
+$flip-card-height: 200px;
+$flip-card-width: 200px;
+
+$flip-card-gaps: 30px 30px;
+
+body {
+
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    background-color: rgb(46, 46, 46);
+
+    .container {
+
+        display: flex;
+        align-items: center;
+        flex-flow: column nowrap;
+        vertical-align: middle;
+
+        h1 {
+
+            text-align: center;
+            position: relative;
+            font-family: 'Bungee', cursive;
+            color: white;
+            font-size: 3em;
+            margin: 0 0 25px 0;
+
+        }
+
+        h2 {
+
+            text-align: right;
+            position: relative;
+            font-family: 'Bungee', cursive;
+            color: white;
+            font-size: 0.9em;
+            width: 100%;
+            margin: 50px;
+        }
+
+        p {
+            position: absolute;
+            color: rgb(46, 46, 46);
+            // color: white;
+            font-size: 1em;
+            top: 40%;
+            text-align: center;
+            font-family: 'Bungee', cursive;
+            font-size: 2em;
+            margin: 0;
+            padding: 0;
+        }
+
+        .picture-grid {
+
+            display: grid;
+            position: relative;
+            grid-template-columns: repeat(4, 1fr);
+            gap: $flip-card-gaps;
+            width: fit-content;
+
+            .flip-card-container {
+
+                position: relative;
+                perspective: 800px;
+                height: $flip-card-height;
+                width: $flip-card-width; 
+                background-color: transparent;
+                border-radius: 50%;
+                border: none;
+
+                .picture-flip-card {
+
+                    // border: 1px solid black;
+                    transition: transform 0.3s;
+                    transform-style: preserve-3d;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    border-radius: 50%;
+                    border: none;
+
+                    div {
+
+                        backface-visibility: hidden;
+                        display: block;
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 50%;
+                        border: none;
+
+                    }
+    
+                    .flip-card-front {
+
+                        background-color: rgb(63, 63, 63);
+
+                        &:hover {
+
+                            border: 1px solid white;
+                            
+                        }
+
+                    }
+
+                    .flip-card-back {
+
+                        background-color: white;
+                        transform: rotateY(180deg);
+                        border: none;
+
+                        img {
+
+                            max-width: 100%;
+                            max-height: 100%;
+                            border-radius: 50%;
+                            border: none;
+
+                        }
+
+                    }
+    
+                }
+
+                .flipped {
+
+                    transform: rotateY(180deg);
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

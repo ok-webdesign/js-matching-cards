@@ -1,0 +1,134 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  background-color: #2e2e2e;
+}
+
+body .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  vertical-align: middle;
+}
+
+body .container h1 {
+  text-align: center;
+  position: relative;
+  font-family: 'Bungee', cursive;
+  color: white;
+  font-size: 3em;
+  margin: 0 0 25px 0;
+}
+
+body .container h2 {
+  text-align: right;
+  position: relative;
+  font-family: 'Bungee', cursive;
+  color: white;
+  font-size: 0.9em;
+  width: 100%;
+  margin: 50px;
+}
+
+body .container p {
+  position: absolute;
+  color: #2e2e2e;
+  font-size: 1em;
+  top: 40%;
+  text-align: center;
+  font-family: 'Bungee', cursive;
+  font-size: 2em;
+  margin: 0;
+  padding: 0;
+}
+
+body .container .picture-grid {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 30px 30px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+body .container .picture-grid .flip-card-container {
+  position: relative;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  height: 200px;
+  width: 200px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: none;
+}
+
+body .container .picture-grid .flip-card-container .picture-flip-card {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-radius: 50%;
+  border: none;
+}
+
+body .container .picture-grid .flip-card-container .picture-flip-card div {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: none;
+}
+
+body .container .picture-grid .flip-card-container .picture-flip-card .flip-card-front {
+  background-color: #3f3f3f;
+}
+
+body .container .picture-grid .flip-card-container .picture-flip-card .flip-card-front:hover {
+  border: 1px solid white;
+}
+
+body .container .picture-grid .flip-card-container .picture-flip-card .flip-card-back {
+  background-color: white;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  border: none;
+}
+
+body .container .picture-grid .flip-card-container .picture-flip-card .flip-card-back img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+  border: none;
+}
+
+body .container .picture-grid .flip-card-container .flipped {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+/*# sourceMappingURL=styles.min.css.map */
